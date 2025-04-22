@@ -1,0 +1,102 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+#titles h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+#titles h2 {
+  font-size: 1.4rem;
+  color: #bbbbbb;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#speakers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.event:hover {
+  box-shadow: 0 0 30px rgba(187, 134, 252, 0.5), 0 0 60px rgba(187, 134, 252, 0.25);
+  transform: scale(1.01);
+}
+
+.event h3 {
+  font-size: 1.2rem;
+  color: #bb86fc;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.event.expanded h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.event .info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease, padding-top 0.3s ease;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.event.expanded .info {
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 1rem;
+  font-size: 1.1rem; /* Optional: increase font size for all info text */
+}
+
+.event .date,
+.event .time,
+.event .location {
+  font-size: 0.9rem;
+  color: #cccccc;
+  transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for date and time */
+.event .date:hover,
+.event .time:hover {
+  font-size: 1.1rem; /* Increase the size of date and time */
+  transform: scale(1.05) translateX(25px); /* Increase the shift to the right (20px) */
+}
+
+/* External links */
+.external_links a {
+  color: #03dac6;
+  text-decoration: none;
+  transition: font-size 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Default smaller size for links */
+}
+
+.external_links a:hover {
+  font-size: 1.2rem; /* Increase the size of the link */
+  color: #00fff7; /* Change color on hover */
+  text-shadow: 0 0 8px #03dac6; /* Add glow effect */
+}
